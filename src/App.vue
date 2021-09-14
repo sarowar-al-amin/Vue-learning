@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Learning Vue Js"/>
+    <h1>{{ title }}</h1>
+    <HelloWorld msg="Learning Vue Js" v-on:titleChange="updateTitle($event)"/>
   </div>
 </template>
 
@@ -12,6 +13,16 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data(){
+    return {
+      title: `Somebodies gonna lean on me`
+    }
+  },
+  methods:{
+    updateTitle(title){
+      this.title = title
+    }
   }
 }
 </script>

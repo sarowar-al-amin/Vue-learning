@@ -7,7 +7,7 @@
     <h3> {{ message }} </h3> 
     <button @click="changeHardCode">Change Hard code</button>
 
-    <table>
+    <table border="2px">
       <tr>
         <td>ID </td><td> Name </td><td> Email</td>
       </tr>
@@ -15,6 +15,8 @@
         <td> {{ user.id }} </td><td> {{ user.name }} </td><td> {{ user.email }}</td>
       </tr>
     </table>
+
+    <button @click="changeTitle">Change title</button>
 
   </div>
 </template>
@@ -27,7 +29,7 @@ export default {
   },
   data() {
     return {
-      isCondition : false,
+      isCondition : true,
       message: `Lean on me`,
       users: [
         { id: 1, name: "Sajib", email: "sajib@sajib.com" },
@@ -44,6 +46,9 @@ export default {
     },
     changeHardCode(){
       this.isCondition = !this.isCondition
+    },
+    changeTitle(){
+      this.$emit('titleChange', 'You gonna miss me when I am gone.')
     }
     // loveSong(item){
     //   console.log(`love you like a love song baby -- ${item}`);
