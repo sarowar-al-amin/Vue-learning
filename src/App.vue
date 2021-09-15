@@ -5,6 +5,8 @@
     <HelloWorld msg="Learning Vue Js" v-on:titleChange="updateTitle($event)"/>
     <!--<Form/> -->
     <SignUp />
+
+    <DataFetchFromAPI />
     <second v-bind:users='users'/>
 
   </div>
@@ -15,6 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import second from './components/Second.vue'
 // import Form from './components/Form.vue'
 import SignUp from './components/SignUp.vue'
+import DataFetchFromAPI from './components/DataFetchFromAPI'
 
 export default {
   name: 'App',
@@ -22,7 +25,8 @@ export default {
     HelloWorld,
     second,
     // Form
-    SignUp
+    SignUp,
+    DataFetchFromAPI
   },
   data(){
     return {
