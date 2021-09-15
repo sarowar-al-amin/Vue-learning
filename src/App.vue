@@ -3,7 +3,8 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <h1>{{ title }}</h1>
     <HelloWorld msg="Learning Vue Js" v-on:titleChange="updateTitle($event)"/>
-    <Form/>
+    <!--<Form/> -->
+    <SignUp />
     <second v-bind:users='users'/>
 
   </div>
@@ -12,14 +13,16 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import second from './components/Second.vue'
-import Form from './components/Form.vue'
+// import Form from './components/Form.vue'
+import SignUp from './components/SignUp.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     second,
-    Form
+    // Form
+    SignUp
   },
   data(){
     return {
